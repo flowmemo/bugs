@@ -1,7 +1,7 @@
 'use strict'
 // import test from 'ava'
 const net = require('net')
-const Promise = require('bluebird')
+// const Promise = require('bluebird')
 require('./server.js')
 
 
@@ -27,6 +27,7 @@ let client = net.connect({ port: 5556 }, () => {
   var p1 = Promise.resolve('client 0')
   p1.then(() => console.log('client 1'))
   .then(() => console.log('client 2'))
+// })
 // }, 0)
 
 // test(t => t.pass())

@@ -1,7 +1,7 @@
 'use strict'
 
 const net = require('net')
-const Promise = require('bluebird')
+// const Promise = require('bluebird')
 const p = Promise.resolve(1)
 
 
