@@ -2,18 +2,10 @@
 const net = require('net')
 const PORT = 5556
 const HOST = '0.0.0.0'
-const server = net.createServer(sock => console.log('server event'))
+
+const server = net.createServer(() => console.log('server event'))
 server.listen(PORT, HOST)
 
-const client = net.connect({ port: 5556 }, () => {
-  console.log('client event')
-  client.write('hello')
-  client.end()
-})
+net.connect({ port: PORT }, () => console.log('client event'))
+
 setTimeout(() => process.exit(), 100)
-
-
-
-
-
-
