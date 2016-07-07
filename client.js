@@ -1,12 +1,16 @@
 'use strict'
 const net = require('net')
-require('./server.js')
+const PORT = 5556
+const HOST = '0.0.0.0'
+const server = net.createServer(sock => console.log('server event'))
+server.listen(PORT, HOST)
 
-let client = net.connect({ port: 5556 }, () => {
+const client = net.connect({ port: 5556 }, () => {
   console.log('client event')
   client.write('hello')
   client.end()
 })
+setTimeout(() => process.exit(), 100)
 
 
 
