@@ -6,9 +6,10 @@ const p = Promise.resolve(1)
 
 
 const server = net.createServer({ allowHalfOpen: false }, sock => {
-  console.log(('CONNECTED: ' + sock.remoteAddress + ':' + sock.remotePort))
+  console.log('server event')
   sock.on('data', data => {
     // console.log('DATA ' + sock.remoteAddress + ': ' + data)
+    /*
     try {
       let mes = (data.toString())
       // console.log(mes)
@@ -24,10 +25,11 @@ const server = net.createServer({ allowHalfOpen: false }, sock => {
       console.error((err))
       return
     }
+    */
   })
 
   sock.on('end', () => {
-    console.log(('client disconnected'))
+     // console.log(('client disconnected'))
   })
 })
 

@@ -15,18 +15,20 @@ var a = {
 }
 
 let client = net.connect({ port: 5556 }, () => {
-  console.log('connected to server!')
+  console.log('client event')
   // console.log(testcase.obj.method)
-  client.write(JSON.stringify(a))
+  client.write('hello')
   client.end()
-  console.log('client connect end')
+  // console.log('client connect end')
 })
 
 // test(async t => {
 // setTimeout(async t => {
+  /*
   var p1 = Promise.resolve('client 0')
   p1.then(() => console.log('client 1'))
   .then(() => console.log('client 2'))
+  */
 // })
 // }, 0)
 
