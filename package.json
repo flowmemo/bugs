@@ -6,22 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ava": "^0.15.2"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.10.1"
-  },
-  "ava": {
-    "require": [
-      "babel-register"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  }
+  "author": "flowmemo",
+  "license": "ISC"  
 }
